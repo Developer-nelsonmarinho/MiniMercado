@@ -1,95 +1,176 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <meta htt-equiv="x-UA-compatible" content="IE-edge">
-    <title>Produtos alimenticios -Mini mercado Aguiar</title>
-    <!--CSS-->
-    <style></style>
-    
-  </head>
-  <body>
-    <!--Cabeçalho-->
-    <header>
-      <nav>
-        <h1>Mini Mercado Aguiar </h1>
-        <p>Produtos Frescos e de qualidade para voce</P>
-      <!--Menu de navegação-->
-      <nav>
-            <ul>
-                <li><a href="index.html">Início</a></li>
-                <li><a href="frutas-verduras.html">Frutas e Verduras</a></li>
-                <li><a href="higiene.html">Produtos de higiene e limpeza</a></li>
-                <li><a href="contato.html">Entre em contato</a></li>
-                <li><a href="sobre.html">Sobre o mercado</a></li>
-            </ul>
-        </nav>
-      <header>
-        <!--Conteudo principal-->
-        <main>
-          <h2>Produtos alimenticios nao pereciveis</h2>
-          <p>Alimentos de qualidade para abastecer sua despensa</p>
-          
-          <!--Produto 1-->
-          <div class="container-produtos">
-          <section class="produto">
-            <h3>Arroz Cristal 5kg</h3>
-            <img src="imagens/produtos/arroz.png" alt="Pacote de arroz tipo 1" width="200">
-            <p><strong>Descrição:</strong> Arroz Cristal tipo 1 5kg</p>
-            <p><strong>Marca:</strong> Cristal</p>
-            <p><strong>Preço:</strong> R$ 39,80 pct</p>
-            <p><strong>Disponibilidade:</strong> 150 unidade promocional</p>
-            
-          </section>
-          <!--Produto 2-->
-          <div class="container-produtos">
-          <section class="produto">
-            <h3>Feijão Carioca</h3>
-            <img src="imagens/produtos/feijao.png" alt="Feijão 1kg" width="200">
-            <p><strong>Descrição:</strong> Feijao rajado Carioca 1kg</p>
-            <p><strong>Marca:</strong> Cristal</p>
-            <p><strong>Preço:</strong> R$ 7,80 pct</p>
-            <p><strong>Disponibilidade:</strong> 50 unidade promocional</p>
-            
-          </section>
-          
-          <!--Produto 3-->
-            <div class="container-produtos">
-          <section class="produto">
-            <h3>Macarrão espaguete</h3>
-            <img src="imagens/produtos/Espaguete.png" alt="pacote Macarrao" width="200">
-            <p><strong>Descrição:</strong> Macarrão Espaguete</p>
-            <p><strong>Marca:</strong> Cristal</p>
-            <p><strong>Preço:</strong> R$ 3,95 pct</p>
-            <p><strong>Disponibilidade:</strong> 10 unidade promocional</p>
-            
-          </section>
-          
-          <hr>
-          
-          <!--Informaçoes adicionais-->
-          <section>
-            <h3> informaçoes importantes</h3>
-            <ul>
-            <li>Produtos com validade longa</li>
-            <li>Armazenamos os produtos em local seco e arejado para qualidade superior</li>
-            <li>Produtos de Marcas conhecidas no mercado</li>
-            <li>as melhores promoçoes somente aqui</li>
-            
-          </section>
-          
-        </main>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Produtos alimentícios - Mini Mercado Aguiar</title>
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+ 
+  <!-- Estilo personalizado -->
+  <style>
+    .product-card {
+      transition: all 0.3s;
+    }
+    .product-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+    .btn-add {
+      background-color: #2c7f4c;
+      color: white;
+    }
+    .btn-add:hover {
+      background-color: #23643a;
+    }
+  </style>
+</head>
+<body>
 
-          <!--Rodape-->
-         
-          </footer>
-              <h3>Informaçoes de contatos</h3>
-            <p><strong>Endereço:</strong> Avenida principal ao lado do Doha Eventos</p>
-            <p><strong>Whatsapp</strong> 63 971523652</p>
-            
-            <hr>
-            <p>&copy; 2025 Mini mercado aguiar. Todos direitos Reservados</p>
-            <p><strong>Desenvolvido pelo aluno:</strong> Nelson Marinho - Estudante de Analises e desenvolvimento de sistemas na PUCRS online</p>
-  </body>
-  </html>
+  <!-- Cabeçalho -->
+  <header class="bg-success text-white text-center py-3">
+    <h1>Mini Mercado Aguiar</h1>
+    <p>Produtos frescos e de qualidade para você</p>
+  </header>
+
+  <!-- Menu -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+    <div class="container">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
+          <li class="nav-item"><a class="nav-link" href="frutas-verduras.html">Frutas e Verduras</a></li>
+          <li class="nav-item"><a class="nav-link active" href="alimenticios.html">Alimentícios</a></li>
+          <li class="nav-item"><a class="nav-link" href="higiene.html">Higiene e Limpeza</a></li>
+          <li class="nav-item"><a class="nav-link" href="contato.html">Entre em contato</a></li>
+          <li class="nav-item"><a class="nav-link" href="sobre.html">Sobre</a></li>
+          <li class="nav-item"><a class="nav-link" href="cadastro.html">Fazer Pedido</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Conteúdo -->
+  <main class="container my-5">
+    <h2 class="text-center text-success">Produtos Alimentícios</h2>
+    <p class="text-center">Selecione os produtos que deseja pedir em casa.</p>
+
+    <!-- Botão para ver pedido -->
+    <div class="text-center mb-4">
+      <button class="btn btn-outline-success" onclick="verPedido()">
+        Ver meus produtos selecionados (0)
+      </button>
+    </div>
+
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+      <!-- Produto 1 -->
+      <div class="col">
+        <div class="card product-card h-100 text-center">
+          <img src="imagens/produtos/arroz.png" class="card-img-top mx-auto mt-3" style="width: 180px;" alt="Arroz">
+          <div class="card-body">
+            <h3>Arroz Cristal 5kg</h3>
+            <p><strong>R$ 39,80</strong></p>
+            <div class="input-group mb-3">
+              <input type="number" class="form-control" value="1" min="1" max="10" id="qtd-arroz">
+              <button class="btn btn-add" onclick="adicionarProduto('Arroz Cristal 5kg', 39.80, 'qtd-arroz')">
+                Adicionar
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Produto 2 -->
+      <div class="col">
+        <div class="card product-card h-100 text-center">
+          <img src="imagens/produtos/feijao.png" class="card-img-top mx-auto mt-3" style="width: 180px;" alt="Feijão">
+          <div class="card-body">
+            <h3>Feijão Carioca</h3>
+            <p><strong>R$ 7,80</strong></p>
+            <div class="input-group mb-3">
+              <input type="number" class="form-control" value="1" min="1" max="10" id="qtd-feijao">
+              <button class="btn btn-add" onclick="adicionarProduto('Feijão Carioca', 7.80, 'qtd-feijao')">
+                Adicionar
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Produto 3 -->
+      <div class="col">
+        <div class="card product-card h-100 text-center">
+          <img src="imagens/produtos/Espaguete.png" class="card-img-top mx-auto mt-3" style="width: 180px;" alt="Macarrão">
+          <div class="card-body">
+            <h3>Macarrão Espaguete</h3>
+            <p><strong>R$ 3,95</strong></p>
+            <div class="input-group mb-3">
+              <input type="number" class="form-control" value="1" min="1" max="10" id="qtd-macarrao">
+              <button class="btn btn-add" onclick="adicionarProduto('Macarrão Espaguete', 3.95, 'qtd-macarrao')">
+                Adicionar
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Rodapé -->
+  <footer class="bg-success text-white text-center py-4 mt-5">
+    <p>&copy; 2025 Mini Mercado Aguiar. Todos os direitos reservados.</p>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    // Array de produtos selecionados
+    let carrinho = [];
+
+    // Função para adicionar produto
+    function adicionarProduto(nome, preco, idQtd) {
+      const quantidade = parseInt(document.getElementById(idQtd).value);
+      const total = preco * quantidade;
+
+      // Verifica se já existe
+      const index = carrinho.findIndex(p => p.nome === nome);
+      if (index > -1) {
+        carrinho[index].quantidade += quantidade;
+        carrinho[index].total += total;
+      } else {
+        carrinho.push({ nome, preco, quantidade, total });
+      }
+
+      // Atualiza botão
+      atualizarBotao();
+      alert(`${quantidade}x ${nome} adicionado(s) ao pedido!`);
+    }
+
+    // Atualiza o botão com quantidade total
+    function atualizarBotao() {
+      const totalItens = carrinho.reduce((sum, p) => sum + p.quantidade, 0);
+      document.querySelector('.btn-outline-success').innerText = `Ver meus produtos selecionados (${totalItens})`;
+    }
+
+    // Função para ver pedido e ir para cadastro
+    function verPedido() {
+      if (carrinho.length === 0) {
+        alert("Você ainda não selecionou nenhum produto.");
+        return;
+      }
+
+      // Salva no localStorage
+      localStorage.setItem('pedido', JSON.stringify(carrinho));
+
+      // Redireciona
+      window.location.href = 'cadastro.html';
+    }
+
+    // Inicializa
+    atualizarBotao();
+  </script>
+</body>
+</html>

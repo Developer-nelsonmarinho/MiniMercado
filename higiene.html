@@ -1,94 +1,168 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Higiene e limpeza</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Higiene e Limpeza - Mini Mercado Aguiar</title>
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Estilo -->
+  <style>
+    .product-card {
+      transition: all 0.3s;
+    }
+    .product-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+    .btn-add {
+      background-color: #2c7f4c;
+      color: white;
+    }
+    .btn-add:hover {
+      background-color: #23643a;
+    }
+  </style>
 </head>
 <body>
-    <!--Cabeçalho-->
-    <header>
-        <h1>Mini mercado Aguiar</h1>
-        <p>Produtos de higiene e limpeza para sua casa</p>
-        <!--Menu de navegaçao-->
-        <nav>
-            <ul>
-                <li><a href="index.html">Início</a></li>
-                <li><a href="frutas-verduras.html">Frutas e Verduras</a></li>
-                <li><a href="alimenticios.html">Produtos alimentícios não perecíveis </a></li>
-                <li><a href="contato.html">Entre em contato</a></li>
-                <li><a href="sobre.html">Sobre o mercado</a></li>
-            </ul>
-        </nav>
-    </header>
-    <!--Conteudo da pagina-->
-    <main>
-        <h2>Produtos de higiene e limpeza</h2>
-        <p>Venha ver os itens em promoção para manter sua casa sempre limpa</p>
 
-        <!--Produto 1 em promoçao-->
-        <section>
+  <!-- Cabeçalho -->
+  <header class="bg-success text-white text-center py-3">
+    <h1>Mini Mercado Aguiar</h1>
+    <p>Produtos de higiene e limpeza para sua casa</p>
+  </header>
 
+  <!-- Menu -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+    <div class="container">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
+          <li class="nav-item"><a class="nav-link" href="frutas-verduras.html">Frutas e Verduras</a></li>
+          <li class="nav-item"><a class="nav-link" href="alimenticios.html">Alimentícios</a></li>
+          <li class="nav-item"><a class="nav-link active" href="higiene.html">Higiene e Limpeza</a></li>
+          <li class="nav-item"><a class="nav-link" href="contato.html">Entre em contato</a></li>
+          <li class="nav-item"><a class="nav-link" href="sobre.html">Sobre</a></li>
+          <li class="nav-item"><a class="nav-link" href="cadastro.html">Fazer Pedido</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Conteúdo -->
+  <main class="container my-5">
+    <h2 class="text-center text-success">Produtos de Higiene e Limpeza</h2>
+    <p class="text-center">Itens em promoção para manter sua casa limpa.</p>
+
+    <!-- Botão para ver pedido -->
+    <div class="text-center mb-4">
+      <button class="btn btn-outline-success" onclick="verPedido()">
+        Ver meus produtos selecionados (0)
+      </button>
+    </div>
+
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+      <!-- Produto 1 -->
+      <div class="col">
+        <div class="card product-card h-100 text-center">
+          <img src="imagens/produtos/sabonete.png" class="card-img-top mx-auto mt-3" style="width: 180px;" alt="Sabonete Dove">
+          <div class="card-body">
             <h3>Sabonete Dove</h3>
-            <img src="imagens/produtos/sabonete.png" alt="Sabonete Dove Hidratante" width="200">
-            <p><strong>Descrição:</strong> Sabonete Dove para deixar sua pele macia e perfumada</p>
-            <p><strong>Preço:</strong> R$ 3,50 por unidade</p>
-            <p><strong>Estoque em promoção:</strong> 20 unidades</p>
+            <p><strong>R$ 3,50</strong> por unidade</p>
+            <div class="input-group mb-3">
+              <input type="number" class="form-control" value="1" min="1" max="10" id="qtd-sabonete">
+              <button class="btn btn-add" onclick="adicionarProduto('Sabonete Dove', 3.50, 'qtd-sabonete')">
+                Adicionar
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
 
-        </section>
-        <hr>
-        <!--Produto 2 em promoção-->
-        <section>
-
+      <!-- Produto 2 -->
+      <div class="col">
+        <div class="card product-card h-100 text-center">
+          <img src="imagens/produtos/detergente.png" class="card-img-top mx-auto mt-3" style="width: 180px;" alt="Detergente Minuano">
+          <div class="card-body">
             <h3>Detergente Minuano</h3>
-            <img src="imagens/produtos/detergente.png" alt="Detergente liquido Minuano concentrado" width="200">
-            <p><strong>Descrição:</strong> Detergente Minuano 500Ml</p>
-            <p><strong>Preço:</strong> R$ 2,75 un</p>
-            <p><strong>Estoque em promoção:</strong> 50 unidades</p>
+            <p><strong>R$ 2,75</strong> por unidade</p>
+            <div class="input-group mb-3">
+              <input type="number" class="form-control" value="1" min="1" max="10" id="qtd-detergente">
+              <button class="btn btn-add" onclick="adicionarProduto('Detergente Minuano', 2.75, 'qtd-detergente')">
+                Adicionar
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
 
-        </section>
+      <!-- Produto 3 -->
+      <div class="col">
+        <div class="card product-card h-100 text-center">
+          <img src="imagens/produtos/papel-hig.png" class="card-img-top mx-auto mt-3" style="width: 180px;" alt="Papel Higiênico Neve">
+          <div class="card-body">
+            <h3>Papel Higiênico Neve</h3>
+            <p><strong>R$ 16,90</strong> por pacote</p>
+            <div class="input-group mb-3">
+              <input type="number" class="form-control" value="1" min="1" max="10" id="qtd-papel">
+              <button class="btn btn-add" onclick="adicionarProduto('Papel Higiênico Neve', 16.90, 'qtd-papel')">
+                Adicionar
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
 
-        <hr>
-        <!--Produto 3 em promoçao-->
-        <section>
+  <!-- Rodapé -->
+  <footer class="bg-success text-white text-center py-4 mt-5">
+    <p>&copy; 2025 Mini Mercado Aguiar. Todos os direitos reservados.</p>
+  </footer>
 
-            <h3>Papel Higienico interfolhado</h3>
-            <img src="imagens/produtos/papel-hig.png" alt="Papel Higienico Neve" width="200">
-            <p><strong>Descrição:</strong> Papel higienico folha dupla neve 12x1</p>
-            <p><strong>Preço:</strong> R$ 16,90 Unidade</p>
-            <p><strong>Estoque em promoção:</strong> 15 pacote com 8 unidades</p>
+  <!-- JavaScript -->
+  <script>
+    // Carregar carrinho
+    let carrinho = JSON.parse(localStorage.getItem('pedido')) || [];
 
-        </section>
+    // Adicionar produto
+    function adicionarProduto(nome, preco, idQtd) {
+      const quantidade = parseInt(document.getElementById(idQtd).value);
+      const total = preco * quantidade;
 
-        <hr>
+      const index = carrinho.findIndex(p => p.nome === nome);
+      if (index > -1) {
+        carrinho[index].quantidade += quantidade;
+        carrinho[index].total += total;
+      } else {
+        carrinho.push({ nome, preco, quantidade, total });
+      }
 
-        <!--Info0rmaçoes adicionais-->
-        <section>
-            <h2>Informações importantes</h2>
-            <ul>
-                <li>Trabalhamos com as mehores marcas</li>
-                <li>Entregamos gratuitamente para compras acima de R$ 250,00 geral</li>
-                <li>Pague como quiser: Cartão de credito, debito, Pix</li>
-            </ul>
-        </section>
+      localStorage.setItem('pedido', JSON.stringify(carrinho));
+      atualizarBotao();
+      alert(`${quantidade}x ${nome} adicionado(s) ao pedido!`);
+    }
 
+    // Atualizar botão
+    function atualizarBotao() {
+      const totalItens = carrinho.reduce((sum, p) => sum + p.quantidade, 0);
+      document.querySelector('.btn-outline-success').innerText = `Ver meus produtos selecionados (${totalItens})`;
+    }
 
-    </main>
+    // Ir para cadastro
+    function verPedido() {
+      if (carrinho.length === 0) {
+        alert("Você ainda não selecionou nenhum produto.");
+        return;
+      }
+      window.location.href = 'cadastro.html';
+    }
 
-              <!--Rodape-->
-
-              <footer>
-        <h3>Informaçoes de contatos</h3>
-        <p><strong>Endereço:</strong> Avenida Principal ao lado do Doha Eventus</p>
-        <p><strong>Telefone:</strong> 63 974636352</p>
-        <p><strong>Whatsapp:</strong> 63 974636352</p>
-
-        <hr>
-        <p>&copy; 2025 Mini Mercado. Todos os direitos reservados.</p>
-        <p>Desenvolvido por: Nelson Marinho - Estudante de Analises e desenvolvimento de sistemas - PUCRS online</p>
-
-
-        </footer>
-    
+    // Inicializar
+    atualizarBotao();
+  </script>
 </body>
 </html>

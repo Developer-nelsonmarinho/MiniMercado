@@ -1,66 +1,54 @@
-# Projeto Mini Mercado 
+# Projeto Mini Mercado Aguiar - Fase 2
 
-Olá! Meu nome é Nelson Marinho e este é um projeto que desenvolvi para colocar em prática meus estudos da disciplina **Fundamentos de Sistemas Web**.
-
-O enunciado da Fase 1 pede para criar um site simples para um minimercado. Eu escolhi "Mini Mercado Aguiar", focando em estruturar todo o conteúdo e a navegação entre as páginas utilizando apenas **HTML semântico**.
+Olá! Meu nome é Nelson Marinho e este é o projeto da fase 2 da disciplina **Fundamentos de Sistemas Web**. O site, inicialmente desenvolvido apenas com HTML semântico na Fase 1, foi aprimorado na Fase 2 com a introdução de **CSS**, **Bootstrap 5** e **JavaScript** para criar uma experiência mais dinâmica, interativa e visualmente agradável.
 
 ## 🛒 Sobre o Mini Mercado Aguiar
 
-O Mini Mercado Aguiar oferece produtos em três categorias principais:
-- **Frutas e Verduras** - Produtos frescos 
-- **Produtos Alimentícios** - Produtos  não perecíveis
-- **Higiene e Limpeza** - Produtos de higiene pessoal e limpeza
+O Mini Mercado Aguiar é um site funcional que permite aos usuários navegar por categorias de produtos, adicioná-los a um pedido e, por fim, preencher um formulário de cadastro e agendamento para finalizar a compra.
 
-**Serviços oferecidos:**
-- Retirada no local
-- Tele-entrega
+**Categorias de Produtos:**
+- **Frutas e Verduras** - Produtos frescos.
+- **Produtos Alimentícios** - Itens de mercearia.
+- **Higiene e Limpeza** - Produtos de uso doméstico e pessoal.
 
-## O que você vai encontrar no site
+## ✨ Funcionalidades da Fase 2
 
-O projeto é composto por 6 páginas interligadas:
-
-- **`index.html`**: A página inicial, que serve como porta de entrada do mini mercado
-- **`frutas-verduras.html`**: Categoria de produtos frescos ofertado pelo mini mercado
-- **`alimenticios.html`**: Categoria de itens de mercearia não perecíveis conforme enunciado
-- **`higiene.html`**: Categoria de produtos de higiene e limpeza
-- **`sobre.html`**: A história e os valores do Mini Mercado Aguiar
-- **`contato.html`**: Endereço, horários e formas de entrar em contato
-
-## Repositorio Github
-
-**repositorio** [MiniMercado](https://github.com/Developer-nelsonmarinho/MiniMercado.git)
+A Fase 2 adicionou interatividade e recursos modernos ao site:
+- **Design Responsivo com Bootstrap:** Todas as páginas foram reestruturadas com Bootstrap 5, garantindo uma ótima visualização em desktops e dispositivos móveis.
+- **Carrossel de Destaques:** A página inicial agora conta com um carrossel de imagens dinâmico para destacar promoções e produtos.
+- **Função Temporal (Relógio):** Um relógio em tempo real foi adicionado ao cabeçalho do site, cumprindo o requisito de função temporal com JavaScript.
+- **Carrinho de Compras Funcional:** O usuário pode adicionar produtos de diferentes categorias ao seu pedido. As informações são salvas no navegador (`localStorage`), permitindo navegar entre as páginas sem perder os itens selecionados.
+- **Formulário de Cadastro Avançado:** A página de finalização do pedido possui um formulário completo com validação em tempo real e máscaras para campos como CPF e telefone, tudo implementado com JavaScript.
+- **Agendamento de Entrega/Retirada:** O cliente pode escolher o tipo de serviço e agendar a melhor data e horário para receber seus produtos.
 
 ## 🌐 Acesse o Site Online
 
-**Site publicado:** [Mini Mercado Aguiar](https://developer-nelsonmarinho.github.io/MiniMercado/ )
+**Site publicado:** [Mini Mercado Aguiar](https://developer-nelsonmarinho.github.io/MiniMercado/)
 
 ## 🚀 Como Visualizar Localmente
 
-Como o projeto usa apenas HTML, não precisa de comandos no terminal somente execultar [index.html] que ja funciona ou atravess do live server.
-
-1. baixe este repositório para o  computador
-2. Encontre o arquivo `index.html`
-3. Abra-o no navegador
-
-Pronto! Agora é só navegar pelas páginas.
+O projeto não requer um servidor para ser executado.
+1. Baixe este repositório para o seu computador.
+2. Encontre o arquivo `index.html`.
+3. Abra-o no seu navegador de preferência.
 
 ## 🛠️ Tecnologias Utilizadas
 
-- **HTML5** - Estrutura semântica
-- **GitHub Pages** - Hospedagem conforme solicitado no enunciado
-
+- **HTML5:** Para a estrutura semântica do conteúdo.
+- **CSS3:** Para estilizações personalizadas.
+- **Bootstrap 5:** Para a criação de um layout responsivo e componentes modernos.
+- **JavaScript (ES6):** Para a implementação de todas as funcionalidades dinâmicas (carrinho, validações, relógio, etc.).
+- **GitHub Pages:** Para a hospedagem do projeto.
 
 ## 📚 Contexto Acadêmico
 
 **Disciplina:** Fundamentos de Sistemas Web  
-**Instituição:** PUC RS - Online 
-**Período:** 3º Trimestre de 2025  
-**Fase projeto:** 1 (HTML apenas, sem CSS ou JavaScript)
+**Instituição:** PUCRS Online  
+**Fase do projeto:** Fase 2 (Concluída)
 
 ## 👨‍💻 Desenvolvido por
 
-**Nelson Marinho**  
-*Estudante de Análise e Desenvolvimento de Sistemas - PUC RS Online*
+**Nelson Marinho** *Estudante de Análise e Desenvolvimento de Sistemas - PUCRS Online*
 
 ---
 © 2025 Nelson Marinho - Projeto Acadêmico
